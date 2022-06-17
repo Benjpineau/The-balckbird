@@ -1,0 +1,530 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[a4paper,top=3cm,bottom=3 cm]{geometry}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{subcaption}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{lmodern} 
+\usepackage[]{algorithm2e}
+\RestyleAlgo{boxruled}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{xcolor}
+
+\usepackage{pdfpages}
+\definecolor{UnivBlue}{RGB}{47, 42, 133}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue,
+	citecolor=blue,
+	linktoc=black
+}
+
+\begin{document}
+	\newpage
+	
+	\AddToShipoutPictureBG*
+	{
+		\includegraphics[width=\paperwidth,height=\paperheight]{/Users/bozelremy/Downloads/background.jpg}
+	}
+	
+	\begin{figure}[!h]
+		\centering
+		 \vspace{1.02cm}\hspace{-9cm}\includegraphics[width=0.5\textwidth]{/Users/bozelremy/Downloads/logoGE.png}
+	\end{figure}
+
+	\vspace{0.8cm}
+
+	\hspace{-0.6cm}{\LARGE \textcolor{UnivBlue}{\textbf{2021-2022}}}\\
+	\vspace{0.8 cm}
+	\Large {
+	
+	\hspace{-0.6cm}{}\\
+	
+	\hspace{-0.6cm}\textbf{Bachelor's Degree L3 Final Project}\\
+
+	\normalsize
+	\hspace{-0.6cm}{Speciality of the project : Mechanics}\\
+	\footnotesize	
+	\vspace{1cm}
+	
+	\LARGE
+	\hspace{-0.6cm}{\Huge \textcolor{UnivBlue}{\textsc{\textbf{\centering BLACKBIRD\\ \hspace{.8cm}BEYOND THE WIND SPEED}}}}\\
+	
+	\large
+	\vspace{0.3cm}
+	\hspace{0.7cm} \textbf{Authors}
+	
+	\begin{table}[!h]
+		\small
+		\begin{tabular}{l l}
+			\hspace{2.6cm}\textbf{Rémy BOZEL} & \multirow{2}{*}{\footnotesize \hspace{2cm} }\\
+			\vspace{0.2cm}
+			\hspace{2.9cm}\footnotesize Senior at the University of Gustave Eiffel & \\
+			\hspace{2.6cm}\textbf{Benjamin PINEAU} & \multirow{2}{*}{\footnotesize \hspace{2cm} }\\
+			\hspace{2.9cm}\footnotesize Senior at the University of Gustave Eiffel & \\
+				\end{tabular}
+	\end{table}	
+
+	
+	
+	\hspace{0.7cm} \textbf{Supervised by :}
+
+	\begin{table}[!h]
+		\small
+		\begin{tabular}{l l}
+			\hspace{2.6cm}\textbf{Luc CHEVALIER} & \hspace{2cm}\multirow{2}{*}{\footnotesize \hspace{-0cm} Supervisor}\\
+						\vspace{0.2cm}
+			\hspace{2.9cm}\footnotesize Director of the ESIPE & \\
+			\hspace{2.6cm}\textbf{Raffael PERON-CANE} & \hspace{2cm}\multirow{2}{*}{\footnotesize \hspace{-0cm} Co-Supervisor}\\
+			\hspace{2.9cm}\footnotesize Technician engineer of the ESIPE & \\
+			\hspace{2.6cm}\textbf{ } & \hspace{2cm}\multirow{2}{*}{\footnotesize \hspace{-0cm} }\\
+			\hspace{2.6cm}\footnotesize  & \\
+				\end{tabular}
+	\end{table}
+\vfill % Fill the rest of the page with whitespace
+\normalsize
+
+\thispagestyle{empty}
+\newpage
+\LARGE \textbf{Preamble}\\
+\\
+\thispagestyle{empty}
+\large
+Can any wind-powered vehicle go directly downwind faster than the wind itself? A brain teaser has led some physicists to ask themselves this question. This idea may not seem far-fetched to experimented sailors, as tacking downwind faster than the wind is something rather common in sailing. However, can it be done on the ground, directly downwind? 
+Well, this idea has been dividing the scientific community, and this our attempt to settle this debate.
+
+\newpage
+
+
+\renewcommand{\contentsname}{Contents}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+
+
+
+
+
+
+\section[introduction]{Introduction}
+\rhead{1. Introduction}
+\pagenumbering{arabic}
+\cfoot{\thepage / \pageref{LastPage}}
+\pagestyle{fancy}
+\normalsize
+\hspace{1cm} In July 2010, during a test supervised by The North American Land Sailing Association, the wind-powered vehicle ``Blackbird`` has reached the record of 2.8 times the speed of the wind straight downwind. 
+Blackbird is a propeller craft that was set up to build a physics debate : ''Directly Downwind Faster Than The Wind'' (DDWFTTW). In other words, can any wind-powered vehicle go faster than the wind straight downwind ?\\
+\\What its creators claim it can do is so counterintuitive that we might think it violates the law of conservation of energy. The controversy of this engine raised several debates around the internet and shook the science community.\\[.7cm]
+\\This project will focus on how controversial is Blackbird, and set up solid scientific arguments to show that it can go beyond the wind. In the first part, we will take a look at the origin of Blackbird and its controversy. In the second part, we will establish a study of the mechanics of the engine with two different approaches. Finally, we will focus on experiments and the modelisation we have set up to go with the theory.
+\clearpage
+
+
+
+
+
+
+
+\section[Origin and story of Blackbird]{Origin and story of Blackbird}
+\rhead{2. Origin and story of Blackbird}
+\pagestyle{fancy}
+\subsection{Brain teaser}
+\hspace{0.5cm} Directly Downwind faster than the wind, aka DDWFTTW, an idea that most of people declared impossible to realize except Rick Cavallaro, a chief scientist at Sportvision in California. In 2001, a friend of his asked him if a sailboat could tack downwind so that it would beat a floating balloon left on the ocean. Indeed, they knew good enough sailboats could go faster than the wind; but will it be enough to overtake the balloon at the wind speed ?\\
+\\
+\hspace{0.5cm}At first, it seems impossible. In fact, as soon as the boat has come to the speed of the wind, there is no more relative speed. So sailboats can’t go downwind faster than the wind. At least not straight downwind. First, the wind starts to push the sail, accelerating the boat. The boat keeps accelerating until it gets to the speed of the wind. As the boat reaches the windspeed, the sail can’t be pushed as there is no relative speed anymore. Indeed, in the reference of the boat, there is no longer any apparent wind. As a result, a boat going directly downwind can only match the speed of the wind.\\
+\\
+\hspace{0.5 cm} However, sailboats can go faster than the wind only if they travel at some angle to the wind. Air flows faster over outer curved surface than the inner side. This phenomenon generates a lift force perpendicular to the apparent wind. It can be easily demonstrated with the Bernoulli's theorem. A component of this force is in the forward direction. Therefore, some boats can sail three to four times wind speed.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=8cm]{/Users/bozelremy/Pictures/Screenshot/Drag force.jpeg}
+\caption{Lift force and drag force on a sail}
+\end{figure}\\
+-- D : Drag\\
+-- L : Lift\\
+-- $v_{A}$ : Apparent wind\\
+-- $F_{t}$ : Resultant\\
+
+Here are the thoughts of Cavallaro... Imagine the earth was a cylinder instead of a sphere. If the world were a cylinder rather than a sphere with the wind blowing along its axis, the boat would trace one long spiraling path as it circled the cylindrical earth. If the wind goes along the area of the cylinder, our sailboat is on a continuous downwind tack. What if we put two sailboats together, one on either side, they can both be pushed by the lift force generated by the pressure difference between the inner and outer surface. These two sails represent each one a blade of a propeller.
+\vspace{.5cm}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=8cm]{/Users/bozelremy/Pictures/Saved Pictures/Prop boats.png}
+\caption{``Sails on a cylinderical earth $\Rightarrow$ Propeller``}
+\end{figure}
+
+Though the wind-powered vehicle that we are going to create has no wing, no sail, there is no fundamental difference between the angles of a spinning propeller blade and the angles of a sail that is tacked downwind.
+\vfill
+
+
+\subsection{From brain teaser to reality}
+\hspace{0.5cm} Is there anything better than building the engine to settle the DDWTTW debate ? Rick Cavallaro had no other choice than building his revolutionnary engine. In 2010, the new superstar ''Blackbird'' was born and ready to beat his rival : the wind. So he started by the chassis, with the pilot covered with a sewn up lycra piece. For the propeller of approximatively 5.33 m diameter, the blades were fiberglassed.\\
+\\A fundamental thing to understand is that the propeller is not powered by the wind. It is actually powered by the wheels and drives the vehicle forward. There is a chain connecting the wheels and the propeller like a bicycle so that the propeller rotates thanks to the rotation of the wheels. There is a long push/pull cable that runs down the inside of one of the pylon fairing and up to the pilot controls.\\
+\\
+The chain drives between the propeller and the wheels and maintains the propeller rotation. The propeller acts like a large screw, slicing through the air and pulling the cart through the air.\\
+\begin{figure}[!h]
+   \begin{minipage}{0.48\linewidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{/Users/bozelremy/Pictures/Saved Pictures/Chassis.jpeg}
+     \caption{The chassis}\label{fig:chassis}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\linewidth}
+     \centering
+     \includegraphics[width=.8\linewidth]{/Users/bozelremy/Pictures/Saved Pictures/Chaine.jpeg}
+     \caption{The chain mechanism}\label{fig:chain}
+   \end{minipage}
+\end{figure}
+
+The propeller pushes the air backwards, generating a forward thrust. As a consequence, for this engine to work, the wind speed over the ground must be different from zero. Still, the only source of energy is coming from the kinetic energy of the wind, taking advantage of the velocity difference between air and ground.\\
+
+How can we prove that Blackbird goes faster than the wind?
+On the front of the engine, there is a telltale which shows which way the wind is blowing. To drive straight down the wind, all we need to do is to follow where the telltale is pointing. As the cart gets up to the wind speed, the telltale should drop straight down because it would be moving at the exact same speed as the wind. In order to prove that it goes faster than the wind, the telltale must be pointing the opposite direction of the wind.\\
+\\
+After Blackbird passed through plenty of tests, it was operationnal to accomplish what it was meant for : beat the wind speed. In July 2010, it officially became a legend. At El Mirage Dry Lake in Mojave Desert in America, the vehicle set up the record and reached 2.8 times the wind speed; certified by the NALSA (North American Land Sailing Association), at the speed of 12,38 $m.s^{-1}$  in a wind of 4,47 $m.s^{-1}$. 
+
+
+
+
+\subsection{Controversy}
+\hspace{0.5cm}After the feat, the solution was posted on the internet. This is when the pointless brainteaser took on a life on its own, dividing science, physics and aerodynamics communities. Forums have exploded, and among the chaos, we discovered that in the 1960s, Andrew Bauer, a wind tunnel engineer, had already thought of such idea. He even wrote a paper about it. Though the story of him beating the wind downwind was credible, compelling and consistent, it could not settle the debate.\\
+
+In 2021, Dereck Muller, who runs a science youtube channel called ''Veritasium'' put the DDWFTTW debate in the spotlight when he posted of video of him going faster than the wind on board the Blackbird. Of course, the fact that it is so counterintuitive raised a lot of controversy. Alex Kusenko, a physics professor at the UCLA (University of California, Los Angeles), claimed that the explanation was wrong and bet the huge sum of \$10,000.\\In fact, he declared that the vehicle was driven by a gusty wind :  the vehicle went faster than the apparent wind, but still it decelerated.
+\vfill
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7cm]{/Users/bozelremy/Pictures/Saved Pictures/Controversy.png}
+\caption{Graphic of Pr. Kusenko}
+\end{figure}
+\vspace{1cm}
+He also added  the fact that there was a wind gradient making the experience bias : the wind was measured at a different height than the telltale is. Due to the interactions of the ground, the wind travels slower close to the ground and faster higher up. He estimates a different speed of about 15\% making Blackbird appear mooving faster than the wind, though the propeller is not. We will next understand why Pr. Kusenko lost \$10,000 by proving that the acceleration is indeed positive.
+
+\newpage
+
+
+
+
+
+\section{Energy}
+\rhead{3. Energy}
+\lhead{3.1 Around VSR and Energy}
+It is important to notice that the purpose of this part is to show through some equations that the acceleration is positive when \emph{the speed of Blackbird has already overpassed the speed of the wind}.
+\subsection{Around VSR and Energy}
+
+\hspace{0.5cm} One important characteristic about Blackbird is the VSR : basically, it’s the ratio of the pitch of the propeller to the circumference of the wheels if we assume the gearbox to be a 1:1 ratio. \\
+What it means is that, it represents the distance the propeller would move through the air when it makes one full rotation (the pitch), over the distance travelled by the wheels, which is its circumference. \\
+The important thing to know is that, in order to go faster than the wind directly downwind, we need a VSR <1 ( >1 if we are to go faster than the wind upwind but we won’t cover this matter).\\
+
+There are 2 approaches to understand the mechanism, but they are basically the same (one may depict more the key element than the other).\\
+First let’s assume that the blackbird is moving at wind speed: $v=v_{wind}$.\\ 
+Then, let’s assume that there are no extraneous losses: the engine transfers all the energy and that we consider the study on a small amount of time so that the forces do not vary.
+There are 2 forces applying on Blackbird: the effect of the wind on the propeller, the thrust, and the effect of the ground on the wheels. 
+We can either use the work or the power.
+
+
+
+
+\subsection{Work approach}
+\textit{For now, we make no assumption regarding the values of the forces.}
+\hspace{0.5cm}We are moving at wind speed, so this implies 2 things: for one full rotation, the wheel will travel $l_{wheel}$  over the ground, and the propeller will travel $l_{prop}$ into the wind.
+And we know that $l_{wheel}$ is the circumference of the wheels and $l_{prop}$  the pitch, and, due to the VSR, 
+$$l_{wheel}>l_{prop}$$
+
+Since we’ve assumed that there are no extraneous losses, the work at the wheels equals the work at the propeller:
+$$W=Fl$$
+$$W_{wheel}=W_{prop}\hspace{1cm}\Longleftrightarrow \hspace{1cm} F_{wheel}l_{wheel}=F_{prop}l_{prop}$$
+$$F_{prop}=F_{wheel}\frac{ l_{wheel}}{l_{prop}}>F_{wheel}$$
+Thus, we know that $\sum \vec{ F_{ext}}>\vec{0}$, which means the Blackbird is accelerating.
+\newpage
+
+
+\subsection{Power approach}
+\lhead{3.3 Power approach}
+\hspace{0.5cm} As we consider the cart already moving faster than the wind : 
+$$v>v_{wind}$$
+Again, we assume no extraneous losses, so $$P_{in}=P_{out}$$
+$$\Longleftrightarrow F_{wheel}v_{wheel}=F_{prop}(v-v_{wind})$$
+$$\Longleftrightarrow \boxed{ F_{prop}=F_{wheel}\frac{v_{wheel}}{v-v_{wind}}>F_{wheel}}$$\\
+If $$F_{prop}>F_{wheel}$$Then : $$\sum \vec{ F}_{ext}>\vec{ 0}$$ As we know from Newton's second law, $$\sum \vec{ F}_{ext}=m\vec{ a}$$We are proving that \textbf{the acceleration is positive}.\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=9cm]{/Users/bozelremy/Pictures/Saved Pictures/Energy.png}
+\caption{Thrust and effect of the ground}
+\label{fig:energy}
+\end{figure}
+\newpage
+
+
+
+
+
+
+
+\section{Study of the blackbird}
+\rhead{4. Study of the blackbird}
+\lhead{4.1 Introducing the subject}
+\pagestyle{fancy}
+\hspace{0.5cm}The purpose of this part is to determine and demonstrate that the acceleration of the blackbird as it approaches the speed of the wind, could still be positive so that the cart keeps accelerating.
+\subsection{Introducing the subject}
+
+\begin{figure}[h]
+\centering
+\includegraphics{/Users/bozelremy/Pictures/Saved Pictures/Blackbird.png}
+\caption{The Blackbird (B)}
+\label{fig:Blackbird}
+\end{figure}
+Let’s consider the blackbird (B) as a mechanism of three solids:
+\begin{itemize}
+	\item{The frame (F) is on a rectilinear x-direction trajectory. The position of the frame is marked by a distance x(t) from a fixed point O on the ground (G). The speed of the vehicle corresponds to the derivative of x(t). The mass of the frame is $m_{F}$}
+	\item{The wheels ($W_{h}$): two rear wheels with a radius R and a mass $m_{w}$. They can be referred as a disk. \\\ As a result, their inertia moment $I_{W}$} is :
+$$I_{W}=\frac{m_{R}R^{2}}{2}$$
+The two wheels around the $(B,\vec{z})$ axis or $(B',\vec{z})$ axis are identical and turn at a rotational speed $\dot{\alpha}$: 
+$$\Omega(P/G)=\dot{\alpha} \vec{z}$$
+Each wheel spins without slipping.
+	\item{The propeller (P): The mass of the propeller is $m_{P}$ and its moment of inertia $I_{P}$ is around the $(C,\vec{x})$ axis of rotation. The propeller turns at a rotational speed $\dot{\beta}$}
+$$\Omega(P/G)=\dot{\beta}\vec{x}$$
+As the propeller is connected to the wheels, there is a ratio K between the speed of the propeller $\dot{\beta}$ and the speed of the wheels $\dot{\alpha}$.
+$$K=\frac{\dot{\beta}}{\dot{\alpha}}$$
+\end{itemize}
+
+\subsection{Cinematics}
+\lhead{4.2 Cinematics}
+\hspace{0.5cm}As A, B, B' and C are part of the frame F, we assume that:
+$$\vec{V}(A/G)=\vec{V}(B/G)=\vec{V}(C/G)=\dot{x}\vec{x}$$
+Then we know that:
+$$\vec{R_{c}}(F/G)=m_{F}\dot{x}\vec{x}$$
+$$\vec{R}_{c}(W_{h}/G)=m_{w}\dot{x}\vec{x}$$
+$$\vec{R}_{c}(P/G)=m_{P}\dot{x}\vec{x}$$
+$$\Updownarrow$$
+$$\vec{R_{d}}(F/G)=m_{F}\ddot{x}\vec{x}$$
+$$\vec{R}_{d}(W_{h}/G)=m_{w}\ddot{x}\vec{x}$$
+$$\vec{R}_{d}(P/G)=m_{P}\ddot{x}\vec{x}$$
+As the wheels spin without slipping, we get:
+$$\vec{V}(I\in W_{h}/G)=\vec{V}(B/G)+\vec{IB}\wedge \vec{\Omega}(W_{h}/G)=\dot{x}\vec{x}+R\vec{y}\wedge \dot{\alpha}\vec{z}$$
+$$\vec{V}(I\in W_{h}/G)=(\dot{x}+R\dot{\alpha})\vec{x}=\vec{0}$$
+With I the point-of-contact between the wheel and the ground.
+\begin{equation}
+\boxed{ \dot{\alpha}=-\frac{\dot{x}}{R} \hspace{ .5cm}
+\Longleftrightarrow \hspace{ .5cm}\ddot{\alpha}=-\frac{\ddot{x}}{R}}
+\end{equation}
+We can now calculate the cinematic and dynamic moment of each solid:
+\begin{itemize}
+	\item[--]{Wheels:}
+	$$\vec{\sigma}_{B}(W_{h}/G)=I_{W}\vec{\Omega}(W_{h}/G)$$ $$\vec{\sigma}_{B}(W_{h}/G)=\frac{m_{w}R^{2}}{2}\dot{\alpha}\vec{z}$$\\
+	$$\vec{\delta}_{B}(W_{h}/G)=\frac{m_{W}R^{2}}{2}\ddot{\alpha}\vec{z}=-\frac{m_{W}R^{2}}{2}\ddot{x}\vec{z}$$
+	\item[--]{Propeller}
+	$$\vec{\sigma}_{C}(P/G)=I_{P}\vec{\Omega}(P/G)$$ $$\vec{\sigma}_{C}(P/G)=I_{P}K\dot{\beta}\vec{x}$$
+	We know that $$K=\frac{\dot{\beta}}{\dot{\alpha}}$$
+	$$\Rightarrow \vec{\sigma}_{C}(P/G)=I_{P}K\dot{\alpha}\vec{x}$$\\
+	$$\vec{\delta}_{C}(P/G)=\frac{I_{P}K}{R}\ddot{x}\vec{x}$$
+Notice that the sign $-$ of the equation (1) disappeared because the propeller is spinning around a different axis than the wheels. We consider only the absolute values.\\
+\end{itemize}
+
+\subsection{Newton's second law}
+Let’s see all the forces we consider:\\
+\\
+\hspace{0.5cm}-- The weight of each solid $\vec{P}$\\
+\\
+\hspace{0.5cm}-- The friction force of the wheels $\vec{F}_{f}$\\
+$$\vec{F}_{f}=-F_{f}\vec{x}$$
+$$F_{f}=-\delta P$$
+P : total weight of the cart\\
+\\
+-- The drag force of the propeller $\vec{F}_{P}$
+$$\vec{F}_{P}=K_{P}(W^{2}-\dot{x}^{2})\vec{x}+C_{P}\dot{\beta}^{2}\vec{x}$$
+With W the windspeed and $K_{P}$ the coefficient considering the air density and the aerodynamism of the blackbird. $C_{P}$ is the coefficient of the characteristics of the propeller which will be of paramount importance in this project\\
+\\
+--Normal ground reaction at the rear axle $\vec{R}_B=F_{t}\vec{x}+N_{B}\vec{y}$	and at the front axle $\vec{R}_A=N_{A}\vec{y}$. $F_{t}$ represents the vehicle traction.
+Let’s focus on $F_t$:
+The power balance in the transmission between the propeller and the wheels of ratio K between the speeds of rotation, show that:
+$$F_{t}=\frac{\eta K}{R}C_{v}$$\\
+$\eta$ : transmission efficiency $(0<\eta <1)$\\
+$C_{v}$ : couple generated by the wind\\
+\lhead{4.3 Newton's second law}
+We can now apply Newton's second law :
+\begin{equation}
+\sum{\vec{ F}}=M\vec{ a}
+\end{equation}
+$$\vec{ F}_{t}+\vec{ F}_{P}+\vec{ F}_{f}+\vec{ R}_{A}+\vec{ R}_{B}+\vec{ P}_{tot}=M\vec{ a}$$
+With
+$$M=2m_{w}+m_{R}+m_{F}$$
+To understand the mechanics of Blackbird, it is necessary to develop only one equation of Newton’s second Law on the x-axis. Indeed, the weight of the solids, $N_A$ and $N_B$ are normal to the x-axis.
+$$\vec{ x}\cdot \sum {\vec{ F}}=M\vec{x}\cdot \vec{ a} $$\\
+$$C_{v}=dK_{p}(W^{2}-\dot{ x}^{2})$$
+So we get from (2)
+$$M\ddot{ x}=\frac{ \eta K}{R}C_{v}+K_{p}(W^{2}-\dot{ x}^{2})+C_{p}\dot{ \beta }^{2}-\delta Mg$$
+$$M\ddot{ x}=\frac{ \eta K}{R}dK_{p}(W^{2}-\dot{ x}^{2})+K_{p}(W^{2}-\dot{ x}^{2})+C_{p} \left(\frac{ R}{K}\right)^{2}\dot{ x} ^{2}-\delta Mg$$
+$$\ddot{ x}=\frac{ 1}{M}\left(\frac{ \eta K}{R}d+1 \right)\frac{ K_{p}(W^{2}-\dot{ x}^{2 })}{M}+\frac{ C_{p}}{M} \left(\frac{ R}{K}\right)^{2}\dot{ x}^{2 }-\delta g$$
+Finally,
+\begin{equation}
+\boxed{ \ddot{ x}=\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right) \left[K_{p}W^{2}-\left(K_{p}-C_{p}\left(\frac{R}{K}\right)\dot{ x}^{2}\right)\right]-\delta g}
+\end{equation}
+We can now describe quite well the mechanics. When the engine starts, its speed equals to $\dot{ x}=0$
+$$\ddot{ x}=\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right)K_{p}W^{2}-\delta g$$\\
+With a relatively strong wind, the acceleration gets positive so that:
+$$\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right)K_{p}W^{2}-\delta g>0$$ $$\Rightarrow \frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right)K_{p}W^{2}>\delta g$$
+Therefore, we know that at the start, the blackbird is accelerating, and its speed increases. As it keeps going faster, $K_{p}(W^2-\dot{ x}^2 )$ of the equation (3) becomes smaller and smaller until the moment:
+$$\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right) \left[K_{p}W^{2}-\left(K_{p}-C_{p}\left(\frac{R}{K}\right)\dot{ x}^{2}\right)\right]-\delta g=0$$
+However, the rotation of the propeller, with relatively strong wind, can make the cart match the speed of the wind $\dot{ x}=W$:
+$$\ddot{ x}=\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right) \left[K_{p}W^{2}-\left(K_{p}-C_{p}\left(\frac{R}{K}\right)W^{2}\right)\right]-\delta g$$
+$$\ddot{ x}=\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right)C_{p}\left(\frac{R}{K}\right)W^{2}-\delta g$$\\
+We should be able to prove that, at this point, $\ddot{ x}>0$:\\
+$$\ddot{ x}=\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right)C_{p}\left(\frac{R}{K}\right)W^{2}-\delta g$$\\
+$$\ddot{ x}=\frac{ 1}{M} \left (\frac{ \eta K}{R}d+1 \right)C_{p}\left(\frac{R}{K}\right)W^{2}>\delta g$$\\
+As we know $M,\eta ,K,R,d,W^2,\delta$  and g, the challenge is to determine $C_p$ to see if this inequation is satisfied. If so, we are proving that the blackbird goes faster than the wind itself.
+\begin{equation}
+\boxed{ C_{p}>\frac{ \delta MgK}{MRW^{2}\left(\frac{ \eta K}{R}d+1\right)}}
+\label{eq:5}
+\end{equation}
+\\
+Notice that it is also very important to fix K to have the best ratio between the wheels and the propeller. The next part is meant to set up an experience to calculate $C_{p}$ to see if the equation (\ref{eq:5}) is satisfied.\\
+To do so, we are proposing to build a small replicate of Blackbird that we will put on a treadmill.
+
+
+\newpage
+
+
+
+
+
+
+\section{Experimentation}
+\lhead{5.1 The replicate}
+
+\subsection{The replicate}
+\rhead{5. Experimentation}
+
+
+If you are still not convinced about ability of Blackbird to go faster than the wind, whether it be because you are not too fond of equations, or because you are thinking that the videos of the record are hoaxes, then there is one last option. You can build yourself a replica of the Blackbird at home. You can either 3D-print the pieces (most of them) which was our case or make them yourself.\\
+\\
+To recreate the situation of going at wind speed, you will need a treadmill. By putting the replica on the treadmill, holding it until inertia builds up, it mimics the situation of going at wind speed.\\
+\\
+The air in the room is still, which is what you would be witnessing if you were in the car going at wind speed: from your perspective the wind would not be moving as you are moving as fast as it is. Moreover, the ground is moving at a certain speed: it is not still, which is necessary because the blackbird harnesses the difference of velocity between the wind and the ground.\\
+\\
+What we will observe if you let go of the cart is that it is speeding up as long as we manage to create minimal losses. This can even be observed if we were to incline the treadmill as long as our replica has top-notch efficiency.\\
+However, some people are still refusing to acknowledge this as a proof. Let’s imagine that we expand the treadmill, so that it is infinitely long and wide: then there is no difference between the treadmill and the \emph{ground}!
+\vspace{2cm}
+
+\begin{figure}[!h]
+   \begin{minipage}{0.48\linewidth}
+     \centering
+     \includegraphics[width=.7\linewidth]{/Users/bozelremy/Pictures/Saved Pictures/replica.png}
+     \caption{Replica made by someone \hspace{2.3cm} on his own}\label{fig:replica}
+   \end{minipage}\hfill
+   \begin{minipage}{0.48\linewidth}
+     \centering
+     \includegraphics[width=1.1\linewidth]{/Users/bozelremy/Pictures/Saved Pictures/3D}
+     \caption{Replica of Blackbird 3D printed}\label{fig: 3D}
+   \end{minipage}
+\end{figure}
+
+
+
+
+
+
+\newpage 
+
+\subsection{Experience determining $C_{p}$}
+\lhead{5.2 Experience determining $C_{p}$}
+We are looking to determine the thrust coefficient of the propeller $C_{p}$. We know that the thrust generated by a rotating propeller follows the law: 
+$$F=\rho C_{t} \dot{ \beta }^{2}D^{4}$$
+\begin{tabular}{ll}
+-- $\dot{ \beta }$ : Propeller rotation speed & 
+-- $\rho$ : Volumic mass\\
+-- $D$ : Propeller's diameter &
+-- $C_{t}$ : Thrust coefficient\\
+\end{tabular}\\
+\\ Hence, if we manage to both know the thrust generated and the angular speed of the propeller then we can deduce the coefficient $C_{t}$. The method we are going to use is to use the flexibility of a beam that will serve as a stress sensor.\\
+\\
+We will use a DC motor, whose rate of rotation is going to vary according to the tension input to do several measurements.
+This motor will be imbedded into an aluminium plate, then we will do several measurements of the thrust generated, thanks to a sensor measuring the deformation at the bottom of the plate, and the rate of rotation, thanks to a tachymeter.\\
+\begin{figure}[h]
+\centering
+\includegraphics[width=13cm]{/Users/bozelremy/Pictures/Saved Pictures/Schema.png}
+\caption{Experience set up}
+\end{figure}
+\hspace{18cm}
+-- $F$ : The force generated by the rotation of the DC motor we are going to apply to measure the deformation $\varepsilon$.\\
+However, to know the thrust generated, we will need to know the link between the thrust and the deformation. It will require to do several tests with known weights. We should obtain a linear graph (which means $F=\lambda \varepsilon $) as long as the deformation remains in the elastic domain.\\
+\\
+Now that we know the relation between $F$ and $\varepsilon$ we can proceed to the tests with the DC motor.
+Since we have established that $F=\rho C_{t}\dot{\beta }^{2}D^{4}$, we know that if we plot the graph $F(\dot{ \beta }^{2})$, it should be linear :
+$$F=C_{p}\dot{ \beta }^{2}$$
+\begin{equation}
+C_{p}=\rho C_{t}D^{4}
+\end{equation}
+\newpage
+
+
+
+
+\subsection{Results and analysis}
+\lhead{5.3 Results and analysis}
+
+%Met ton texte ici.
+%Pour revenir a la ligne \\
+%Pour sauter une ligne : \\ + retout à ligne + \\
+%Pour insérer des termes avec indices/puissances/caractères spéciaux, passer en mode équation d'abrod avec $ ... $ 
+ 
+
+
+
+
+
+\newpage
+
+
+
+\section{Conclusion}
+\rhead{6. Conclusion}
+\lhead{}
+
+
+
+%Texte de conclusion
+
+
+
+\newpage
+\section{Reference}
+\rhead{7. Reference}
+\begin{itemize}
+\item{\href{https://en.wikipedia.org/wiki/Blackbird_(wind-powered_vehicle)}{Blackbird (wind-powered vehicle), Wikipedia}}
+\item{\href{https://www.youtube.com/watch?v=jyQwgBAaBag}{Veritasium video : ''Risking my life to settle a physics debate''}}
+\item{\href{https://www.youtube.com/watch?v=yCsgoLc_fzI}{Veritasium video : ''A physics prof bet me 10 000 dollars I'm wrong''}}
+\item{\href{https://www.wired.com/2010/08/ddwfttw/}{''A Long, Strange Trip Downwind Faster Than the Wind'', WIRED}}
+\item{\href{http://www.blueplanettimes.com/downwind-noir-the-record/}{''Downwind noir : The record'', Blue Planet Times}}
+\item{\href{https://web.archive.org/web/20120120101250/http:/www.fasterthanthewind.org/}{''Ride like the wind (only faster)'', WayBack Magazine}}
+\item{\href{https://youtu.be/X6oJpnSJyV8}{''DDWFTTW Talk 2017-01-18'', Rick Cavallaro}}
+\item{\href{https://youtu.be/CkhBskovitQ}{''How does it work ?'', Engineering with Rosie}}
+\item{\href{https://youtu.be/VUgajGv4Aok}{''Building the Vehicle Physicists Called Impossible'', Xyla Foxlin}}
+\item{\href{https://www.aapt.org/physicsteam/2019/upload/USAPhO-2013-Solutions.pdf}{US Team Semifinal Exam Physics Olympiad 2013}}
+\item{\href{https://www4.ac-nancy-metz.fr/ciras/cahierdubia/helice/helice.html}{''L'hélice'', Cahier du BIA}}
+\item{\href{https://ve42.co/Drela}{M. Drela Analyse of the DDWFTTW}}
+\item{\href{https://docs.google.com/presentation/d/1xuN-9C1Gs6MAVTJkhh1vMJw0atmSsTsKDkhEfN898K4/edit#slide=id.gb6e540a45a_618_0}{Professor Kusenko's refutation}}
+\item{\href{https://docs.google.com/presentation/d/14POuDW04u27kMPkfFoEPFdGUw70DZgcobNtY2AEqybY/edit#slide=id.gdc0eb9892c_0_186}{Critical analysis of the refutation}}
+\item{\href{https://www.thingiverse.com/thing:489...}{CAD files, 3D printed files}}
+\item{\href{https://www.apcprop.com/product/14x4-...}{The propeller we used}}
+\end{itemize}
+\end{document}
